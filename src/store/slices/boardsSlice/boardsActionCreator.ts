@@ -13,9 +13,12 @@ export const SignInCreator = ({
   payload: { navigation, userEmail, userPassword },
 })
 
-export const setColumnsCreator = ({ boardId }: SetColumnsCreatorProps) => ({
+export const setColumnsCreator = ({
+  boardId,
+  navigation,
+}: SetColumnsCreatorProps) => ({
   type: BoardsCreators.ASYNC_SET_COLUMNS,
-  payload: { boardId },
+  payload: { boardId, navigation },
 })
 
 export const setBoardsCreator = () => ({

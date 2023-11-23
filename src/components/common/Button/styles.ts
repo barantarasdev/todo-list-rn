@@ -8,6 +8,7 @@ export const BUTTON_PADDING_HEIGHT = 10
 
 export const styles = StyleSheet.create({
   button: {
+    maxWidth: 150,
     paddingTop: BUTTON_PADDING_HEIGHT,
     paddingBottom: BUTTON_PADDING_HEIGHT,
     paddingLeft: BUTTON_PADDING_WIDTH,
@@ -16,6 +17,7 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
   },
   buttonText: {
+    fontSize: 30,
     fontWeight: '700',
     color: COLORS.secondary,
   },

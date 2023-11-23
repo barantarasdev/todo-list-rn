@@ -31,4 +31,5 @@ export type UserStorageT = {
 export type RootParamList = {
   Home: undefined
   SignIn: undefined
+  Columns: undefined
 }
