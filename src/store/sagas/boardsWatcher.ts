@@ -20,9 +20,13 @@ function* setBoardsWorker() {
 }
 
 function* setColumnsWorker(action: PayloadAction<SetColumnsCreatorProps>) {
-  const columns: ColumnT[] = yield call(getColumns, action.payload.boardId)
+  const { navigation, boardId } = action.payload
+
+  const columns: ColumnT[] = yield call(getColumns, boardId)
 
   yield put(setColumns(columns))
+
+  navigation.navigate('Columns')
 }
 
 function* setSignInWorker(action: PayloadAction<SetSignInCreatorProps>) {

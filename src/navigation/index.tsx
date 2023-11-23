@@ -2,6 +2,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 
 import useNavigation from './useNavigation'
+import BoardScreen from '../screens/Board'
 import Home from '../screens/Home'
 import SignIn from '../screens/SingIn'
 
@@ -17,6 +18,7 @@ function Navigation() {
       }}
     >
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Columns" component={BoardScreen} />
       <Stack.Screen name="SignIn" component={SignIn} />
     </Stack.Navigator>
   )

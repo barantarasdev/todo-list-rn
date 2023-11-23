@@ -9,6 +9,7 @@ export type BoardsStateT = {
 
 export type SetColumnsCreatorProps = {
   boardId: string
+  navigation: NavigationProp<RootParamList>
 }
 
 export type SetSignInCreatorProps = {

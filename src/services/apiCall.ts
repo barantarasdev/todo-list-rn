@@ -37,7 +37,7 @@ async function sendRequest<T>({
     }
 
     const { refreshToken: expiredRefreshToken } =
-      await getData<UserStorageT>('user')
+      await getData<UserStorageT>('refreshToken')
     const refreshResponse = await fetch(`${BASE_URL}/auth/refresh`, {
       method: MethodsE.GET,
       headers: {
@@ -47,8 +47,8 @@ async function sendRequest<T>({
     const { accessToken, refreshToken } = await refreshResponse.json()
 
     if (refreshResponse.ok) {
-      await storeData('accessToken', accessToken)
-      await storeData('refreshToken', refreshToken)
+      await storeData('accessToken', { accessToken })
+      await storeData('refreshToken', { refreshToken })
 
       return sendRequest({
         url,
