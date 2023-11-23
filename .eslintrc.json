@@ -1,0 +1,15 @@
+{
+  "extends": ["universe/native"],
+  "root": true,
+  "rules": {
+    "no-console": "error",
+    "arrow-body-style": ["error", "as-needed"],
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ]
+  }
+}
